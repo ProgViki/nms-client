@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import { Layout, Menu, theme, Avatar, Dropdown, Space, Typography, Button } from 'antd';
 import {
-  DashboardOutlined,
-  DesktopOutlined,
-  AlertOutlined,
-  SettingOutlined,
-  BarChartOutlined,
-  FileTextOutlined,
-  UserOutlined,
-  LogoutOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
+  DashboardOutlined, DesktopOutlined, AlertOutlined,
+  SettingOutlined, BarChartOutlined, FileTextOutlined,
+  UserOutlined, LogoutOutlined, MenuFoldOutlined,
+  MenuUnfoldOutlined, ApartmentOutlined, HeartOutlined,
+  BellOutlined, ToolOutlined
 } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 
@@ -65,14 +60,29 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       label: 'Network Devices',
     },
     {
+      key: '/topology',
+      icon: <ApartmentOutlined />,
+      label: 'Network Topology',
+    },
+    {
       key: '/performance',
       icon: <BarChartOutlined />,
       label: 'Performance',
     },
     {
+      key: '/health',
+      icon: <HeartOutlined />,
+      label: 'System Health',
+    },
+    {
       key: '/alerts',
       icon: <AlertOutlined />,
       label: 'Alerts',
+    },
+    {
+      key: '/notifications',
+      icon: <BellOutlined />,
+      label: 'Notifications',
     },
     {
       key: '/configuration',
@@ -83,6 +93,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       key: '/reports',
       icon: <FileTextOutlined />,
       label: 'Reports',
+    },
+    {
+      key: '/tools',
+      icon: <ToolOutlined />,
+      label: 'Tools',
     },
   ];
 
