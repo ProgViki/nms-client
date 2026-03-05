@@ -139,7 +139,7 @@ const Tools: React.FC = () => {
           >
             <Watermark
               content={['Network Operations', 'Confidential']}
-              fontSize={16}
+            //   fontSize={16}
               gap={[100, 100]}
               rotate={-22}
             >

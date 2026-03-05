@@ -3,7 +3,8 @@ import {
   Card, Table, Tag, Space, Button, Badge, Typography,
   Select, DatePicker, Input, Tabs, Timeline, Alert,
   Checkbox, Radio, Switch, Rate, Progress, Statistic,
-  Row, Col, Tooltip, Dropdown, Menu, Avatar, List
+  Row, Col, Tooltip, Dropdown, Menu, Avatar, List,
+  Divider
 } from 'antd';
 import {
   BellOutlined, CheckCircleOutlined, ExclamationCircleOutlined,

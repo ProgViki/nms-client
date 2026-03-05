@@ -8,12 +8,13 @@ import {
   ApiOutlined, NodeIndexOutlined, QrcodeOutlined
 } from '@ant-design/icons';
 import { dummyDevices } from '../services/dummyData';
+import { NetworkDevice } from '@/types';
 
 const { Title, Text } = Typography;
 
 const NetworkTopology: React.FC = () => {
   const [viewMode, setViewMode] = useState<string>('tree');
-  const [selectedDevice, setSelectedDevice] = useState<any>(null);
+  const [selectedDevice, setSelectedDevice] = useState<NetworkDevice | null>(null);
 
   const treeData = [
     {
@@ -68,10 +69,11 @@ const NetworkTopology: React.FC = () => {
     }
   ];
 
-  const deviceImages = {
+  const deviceImages: Record<string, string> = {
     router: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=200',
     switch: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200',
-    firewall: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=200'
+    firewall: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=200',
+    'access-point': 'https://images.unsplash.com/photo-1563777097627-8d0be6c606b0?w=200'
   };
 
   return (
@@ -93,7 +95,7 @@ const NetworkTopology: React.FC = () => {
               { label: 'List View', value: 'list', icon: <QrcodeOutlined /> }
             ]}
             value={viewMode}
-            onChange={setViewMode}
+            onChange={(value) => setViewMode(value as string)}
           />
           <Tooltip title="Export Topology">
             <Button icon={<QrcodeOutlined />}>Generate QR</Button>
@@ -111,7 +113,7 @@ const NetworkTopology: React.FC = () => {
                 treeData={treeData}
                 onSelect={(selectedKeys, info) => {
                   const device = dummyDevices.find(d => d.id === selectedKeys[0]);
-                  setSelectedDevice(device);
+                  setSelectedDevice(device || null);
                 }}
                 className="bg-gray-50 p-4 rounded-lg"
               />
