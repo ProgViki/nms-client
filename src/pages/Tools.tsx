@@ -31,7 +31,7 @@ const Tools: React.FC = () => {
     setTimeout(() => setSpinning(false), 3000);
   };
 
-  const tourSteps = [
+  const gtourSteps = [
     {
       title: 'Welcome to Tools',
       description: 'This page demonstrates various utility components',
