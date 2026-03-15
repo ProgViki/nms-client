@@ -12,6 +12,8 @@ import {
   CloudServerOutlined, SafetyOutlined, RocketOutlined
 } from '@ant-design/icons';
 import { dummyDevices } from '../services/dummyData';
+import type { TransferProps } from "antd";
+import type { Key } from "react";
 
 const { Title, Text } = Typography;
 const { Option } = Select;
@@ -22,7 +24,8 @@ const NetworkDevices: React.FC = () => {
   const [filterType, setFilterType] = useState<string>('');
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedDevice, setSelectedDevice] = useState<any>(null);
-  const [transferTargetKeys, setTransferTargetKeys] = useState<string[]>([]);
+  // const [transferTargetKeys, setTransferTargetKeys] = useState<string[]>([]);
+  const [transferTargetKeys, setTransferTargetKeys] = useState<Key[]>([]);
   const [mentionsText, setMentionsText] = useState('');
 
   const filteredDevices = dummyDevices.filter(device =>
@@ -216,7 +219,8 @@ const NetworkDevices: React.FC = () => {
             <Transfer
               dataSource={transferData}
               targetKeys={transferTargetKeys}
-              onChange={setTransferTargetKeys}
+              // onChange={setTransferTargetKeys}
+              onChange={(nextKeys) => setTransferTargetKeys(nextKeys)}
               render={item => item.title}
               listStyle={{ width: 250, height: 300 }}
             />
