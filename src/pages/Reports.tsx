@@ -3,13 +3,18 @@ import {
   Card, Typography, Form, Select, DatePicker, Button,
   Table, Tag, Space, Checkbox, Radio, Input, Tabs,
   List, Avatar, Progress, Statistic, Row, Col, Divider,
-  Tooltip, Badge, Rate, Steps, Upload, message, Alert
+  Tooltip, Badge, Rate, Steps, Upload, message, Alert,
+  Slider,
+  Timeline,
+  Pagination
 } from 'antd';
 import {
   FileTextOutlined, BarChartOutlined, PieChartOutlined,
   DownloadOutlined, PrinterOutlined, ShareAltOutlined,
   ScheduleOutlined, StarOutlined, CheckCircleOutlined,
-  ClockCircleOutlined, FilePdfOutlined, FileExcelOutlined
+  ClockCircleOutlined, FilePdfOutlined, FileExcelOutlined,
+  PlusOutlined,
+  ExportOutlined
 } from '@ant-design/icons';
 import { dummyDevices } from '../services/dummyData';
 
