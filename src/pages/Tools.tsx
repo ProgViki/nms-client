@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import {
   Card, Button, Space, Typography, Skeleton, Spin,
   Watermark, Affix, Tour, Row, Col, Breadcrumb, Switch,
-  Alert, Progress, Tag, Divider
+  Alert, Progress, Tag
 } from 'antd';
 import {
   LoadingOutlined, CameraOutlined, PushpinOutlined,

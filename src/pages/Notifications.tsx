@@ -2,16 +2,14 @@ import React, { useState } from 'react';
 import {
   Card, Button, Space, Typography, Alert, Drawer, Modal,
   notification, Popconfirm, message, List, Tag, Badge,
-  Breadcrumb, Switch, Radio, Timeline, Result,
+  Breadcrumb, Switch, Radio, Timeline,
   Row,
   Col,
   Divider,
   Input
 } from 'antd';
 import {
-  BellOutlined, CheckCircleOutlined, InfoCircleOutlined,
-  WarningOutlined, ExclamationCircleOutlined, MailOutlined,
-  SoundOutlined, DeleteOutlined, SettingOutlined
+  BellOutlined, ExclamationCircleOutlined, MailOutlined, DeleteOutlined, SettingOutlined
 } from '@ant-design/icons';
 import { dummyAlerts } from '../services/dummyData';
 

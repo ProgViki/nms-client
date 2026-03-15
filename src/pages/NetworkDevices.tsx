@@ -3,7 +3,8 @@ import {
   Table, Card, Tag, Space, Button, Input, Select, Badge,
   Typography, Row, Col, Statistic, Tooltip, Avatar, List,
   Transfer, TreeSelect, Mentions, Rate, Slider, Switch,
-  Modal, Form, Breadcrumb, Dropdown, Menu, Pagination
+  Modal, Form, Breadcrumb, Dropdown, Menu, Pagination,
+  Flex
 } from 'antd';
 import {
   SearchOutlined, PlusOutlined, EditOutlined, DeleteOutlined,
