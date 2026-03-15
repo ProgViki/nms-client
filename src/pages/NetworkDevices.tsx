@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 import {
   Table, Card, Tag, Space, Button, Input, Select, Badge,
-  Typography, Row, Col, Statistic, Tooltip, Avatar, List,
+  Typography, Row, Col, Statistic, Tooltip, Avatar,
   Transfer, TreeSelect, Mentions, Rate, Slider, Switch,
-  Modal, Form, Breadcrumb, Dropdown, Menu, Pagination,
-  Flex
+  Modal, Form, Breadcrumb, Dropdown, Flex
 } from 'antd';
 import {
-  SearchOutlined, PlusOutlined, EditOutlined, DeleteOutlined,
-  PoweroffOutlined, ReloadOutlined, EyeOutlined, WifiOutlined,
-  CloudServerOutlined, SafetyOutlined, RocketOutlined
+  SearchOutlined, PlusOutlined, EditOutlined, ReloadOutlined, EyeOutlined, WifiOutlined,
+  CloudServerOutlined,
 } from '@ant-design/icons';
 import { dummyDevices } from '../services/dummyData';
-import type { TransferProps } from "antd";
 import type { Key } from "react";
 
 const { Title, Text } = Typography;
@@ -23,8 +20,6 @@ const NetworkDevices: React.FC = () => {
   const [searchText, setSearchText] = useState('');
   const [filterType, setFilterType] = useState<string>('');
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [selectedDevice, setSelectedDevice] = useState<any>(null);
-  // const [transferTargetKeys, setTransferTargetKeys] = useState<string[]>([]);
   const [transferTargetKeys, setTransferTargetKeys] = useState<Key[]>([]);
   const [mentionsText, setMentionsText] = useState('');
 
